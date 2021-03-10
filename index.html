@@ -14,47 +14,46 @@
   <h1> Sign Up Today!</h1>
 
   <!-- Form -->
-  <form id='form'>
+  <form id='form' >
     <!-- Full Name -->
     <div class="form-group">
         <label for="name"> Full Name</label>
-        <input type="text" id="name" placeholder="Full Name"
+        <input title="Enter your fullname" type="text" id="name" placeholder="Full Name" name="name"
         required minlength="3" maxlength="100">
     </div>
 
      <!-- Phone Number -->
      <div class="form-group">
       <label for="phone"> Phone Number</label>
-      <input type="tel" id="phone" placeholder="555-5555-5555"
-      required>
+      <input title="Enter your digit following the placeholder pattern" type="tel" id="phone" placeholder="555-5555-5555" name="phone" required 
+       pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" minlength="11" maxlength="14" >
   </div>
 
   <!-- Email Address -->
   <div class="form-group">
     <label for="email"> Email Address</label>
-    <input type="email" id="email" placeholder="email@address.com"
+    <input type="email" id="email" placeholder="email@address.com" name="email"
     required>
 </div>
 
   <!-- Website URL -->
   <div class="form-group">
     <label for="website">Website url</label>
-    <input type="URL" id="website" placeholder="https://google.com"
+    <input type="URL" id="website" placeholder="https://google.com" name="website"
     required>
 </div>
 
 <!-- password -->
 <div class="form-group">
   <label for="password1"> Password</label>
-  <input type="password" id="password1" placeholder="Create password"
+  <input title="Password must contain at least 6 characters, including UPPER/lowercase and numbers" type="password" id="password1"  pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"  placeholder="Create password" 
   required>
 </div>
 
 <!-- Confirm password -->
 <div class="form-group">
   <label for="password2">Confrim Password</label>
-  <input type="password" id="password2" placeholder="Confirm password"
-  required>
+  <input title="Please enter the same Password as above" type="password" id="password2"   pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"  placeholder="Confirm password"  name="password" required>
 </div>
 
 <!-- Button -->
